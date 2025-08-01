@@ -1,53 +1,51 @@
-/* --- Глобальные улучшения и переменные --- */
+/* --- Глобальные стили и переменные --- */
 :root {
     --primary-color: #0d47a1;
     --secondary-color: #ffc107;
-    --light-gray: #f8f9fa;
-    --text-dark: #212529;
-    --border-radius: 0.5rem; /* Более мягкие скругления */
-}
-
-/* Плавная прокрутка */
-html {
+    --bg-light: #f4f7f6;
+    --text-color: #333;
+    --text-light: #fff;
+    --border-color: #e0e0e0;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --container-width: 1100px;
+    --border-radius: 8px;
+    scroll-padding-top: 80px; /* Компенсация высоты навбара при прокрутке */
     scroll-behavior: smooth;
 }
 
 body {
-    counter-reset: step-counter;
+    font-family: var(--font-family);
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* Плавные переходы для интерактивных элементов */
-.btn, .card, .accordion-button {
-    transition: all 0.3s ease-in-out;
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* --- Стили для отдельных секций --- */
-
-/* Навигация */
-.navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.nav-link:hover {
-    color: var(--secondary-color) !important;
+section {
+    padding: 80px 0;
 }
 
-/* Главный экран */
-#home {
-    min-height: 80vh;
-    background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://unsplash.com/photos/a-hand-is-placing-business-cards-into-a-pocket-zNe0bCfT7i8') center/cover no-repeat;
+.bg-light {
+    background-color: var(--bg-light);
 }
 
-.btn-warning {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.btn-warning:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+.text-center {
+    text-align: center;
 }
 
-/* Заголовки секций */
+h1, h2, h3, h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
 h2 {
-    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 50px;
 }
 h2::after {
     content: '';
@@ -58,62 +56,295 @@ h2::after {
     margin: 15px auto 0;
 }
 
-/* Карточки с шагами ("Как отправить") */
+.lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- Компоненты --- */
+
+/* Навигация (Flexbox) */
+.navbar {
+    background: var(--text-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin-left: 25px;
+}
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Мобильное меню */
+.burger-menu {
+    display: none; /* Скрыто по умолчанию */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.burger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Главный экран (Flexbox) */
+.hero {
+    background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)), url('https://images.unsplash.com/photo-1599252517684-aa0a67130099?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+}
+.hero h1 {
+    color: var(--text-light);
+    font-size: 3em;
+}
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+
+/* Услуги */
+.services-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.services-list li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.services-list li:last-child {
+    border-bottom: none;
+}
+.services-list .fa-check {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.note {
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Шаги (Grid) */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
 .step-card {
-    background: var(--light-gray);
+    background: var(--bg-light);
     padding: 25px;
     border-radius: var(--border-radius);
-    height: 100%;
-    position: relative;
-    border-top: 4px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+.address-box {
+    background-color: #e3f2fd;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    margin: 40px auto 0;
+    max-width: 800px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
-/* Карточки цен */
-#pricing .card {
-    border: none;
-    border-radius: var(--border-radius);
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+/* Цены (Grid) и Отзывы (Grid) */
+.pricing-grid, .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
-#pricing .card:hover {
+.price-card, .review-card {
+    background: var(--text-light);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.price-card:hover, .review-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 15px 0;
+}
+.review-card p {
+    font-style: italic;
+    margin: 0 0 15px;
+}
+.review-card footer {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: right;
 }
 
-/* Карточки отзывов */
-#reviews .card {
-    border-radius: var(--border-radius);
-    border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+/* FAQ (Аккордеон) */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
 }
-#reviews .card:hover {
-     transform: translateY(-3px);
-     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+.faq-item {
+    border-bottom: 1px solid var(--border-color);
 }
-#reviews .blockquote {
+.faq-question {
+    padding: 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+}
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.faq-answer p {
+    padding-bottom: 20px;
+}
+
+/* Контакты (Grid) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+.contact-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
     font-size: 1.1rem;
 }
-#reviews .blockquote-footer {
+.contact-details i {
     color: var(--primary-color);
-    font-weight: 600;
+    margin-right: 15px;
+    width: 20px;
+}
+.contact-details a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+    box-sizing: border-box; /* Важно для корректной ширины */
 }
 
-/* Аккордеон (FAQ) */
-.accordion-button:not(.collapsed) {
-    background-color: var(--primary-color);
-    color: white;
-}
-.accordion-button:not(.collapsed)::after {
-    filter: brightness(0) invert(1);
-}
-.accordion-item {
-    border-radius: var(--border-radius) !important;
-    overflow: hidden; /* Важно для скругления */
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+/* Подвал */
+.main-footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Футер (подвал) */
-footer.bg-primary {
-    background-color: #0b3a8a !important; /* Чуть темнее основного синего */
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Высота навбара */
+        left: 0;
+        background: var(--text-light);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+    .nav-links a {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid var(--bg-light);
+    }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
