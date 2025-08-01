@@ -34,7 +34,7 @@ body {
 /* Главный экран */
 #home {
     min-height: 80vh;
-    background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://images.unsplash.com/photo-1599252517684-aa0a67130099?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+    background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://unsplash.com/photos/a-hand-is-placing-business-cards-into-a-pocket-zNe0bCfT7i8') center/cover no-repeat;
 }
 
 .btn-warning {
