@@ -1,54 +1,121 @@
-/* Плавная прокрутка для всего сайта */
+/* --- Глобальные улучшения и переменные --- */
+:root {
+    --primary-color: #0d47a1;
+    --secondary-color: #ffc107;
+    --light-gray: #f8f9fa;
+    --text-dark: #212529;
+    --border-radius: 0.5rem; /* Более мягкие скругления */
+}
+
+/* Плавная прокрутка */
 html {
     scroll-behavior: smooth;
 }
 
-/* Стили для главного экрана */
-#home {
-    min-height: 80vh;
-    background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)), url('https://images.unsplash.com/photo-1599252517684-aa0a67130099?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+body {
+    counter-reset: step-counter;
 }
 
-/* Декоративное подчеркивание для заголовков секций */
+/* Плавные переходы для интерактивных элементов */
+.btn, .card, .accordion-button {
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Стили для отдельных секций --- */
+
+/* Навигация */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Главный экран */
+#home {
+    min-height: 80vh;
+    background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://images.unsplash.com/photo-1599252517684-aa0a67130099?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+    /* Тень для текста для лучшей читаемости */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-warning {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.btn-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Заголовки секций */
+h2 {
+    font-weight: 700;
+}
 h2::after {
     content: '';
     display: block;
     width: 60px;
     height: 4px;
-    background: #ffc107; /* желтый акцент Bootstrap (warning color) */
-    margin: 10px auto 0;
+    background: var(--secondary-color);
+    margin: 15px auto 0;
 }
 
-/* Кастомный стиль для карточек с шагами */
+/* Карточки с шагами ("Как отправить") */
 .step-card {
-    background: #f8f9fa; /* bg-light */
-    padding: 20px;
-    border-radius: 0.375rem; /* стандартный радиус скругления Bootstrap */
-    border: 1px solid #dee2e6;
+    background: var(--light-gray);
+    padding: 25px;
+    border-radius: var(--border-radius);
     height: 100%;
     position: relative;
-    padding-left: 50px;
+    border-top: 4px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.step-card::before {
-    counter-increment: step-counter;
-    content: counter(step-counter);
-    position: absolute;
-    left: -15px;
-    top: 20px;
-    font-weight: bold;
-    font-size: 1.2em;
-    background-color: #ffc107; /* желтый акцент */
-    color: #333;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #fff;
+/* Карточки цен */
+#pricing .card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+#pricing .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
-body {
-    counter-reset: step-counter;
+/* Карточки отзывов */
+#reviews .card {
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+#reviews .card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+#reviews .blockquote {
+    font-size: 1.1rem;
+}
+#reviews .blockquote-footer {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Аккордеон (FAQ) */
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+.accordion-item {
+    border-radius: var(--border-radius) !important;
+    overflow: hidden; /* Важно для скругления */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Футер (подвал) */
+footer.bg-primary {
+    background-color: #0b3a8a !important; /* Чуть темнее основного синего */
 }
