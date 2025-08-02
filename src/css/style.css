@@ -1,0 +1,260 @@
+/* --- Глобальные стили и переменные --- */
+:root {
+    --primary-color: #0d47a1;
+    --secondary-color: #ffc107;
+    --bg-light: #f4f7f6;
+    --text-color: #333;
+    --text-light: #fff;
+    --border-color: #e0e0e0;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --container-width: 1100px;
+    --border-radius: 8px;
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+section { padding: 80px 0; }
+.bg-light { background-color: var(--bg-light); }
+.text-center { text-align: center; }
+h1, h2, h3, h4 { margin-top: 0; color: var(--primary-color); }
+h2 { font-size: 2.2em; margin-bottom: 50px; }
+h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--secondary-color); margin: 15px auto 0; }
+.lead { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+.btn { display: inline-block; padding: 12px 30px; background-color: var(--secondary-color); color: var(--text-color); font-weight: bold; text-decoration: none; border-radius: var(--border-radius); transition: transform 0.2s ease, box-shadow 0.2s ease; border: none; cursor: pointer; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* --- ОСНОВНЫЕ КОМПОНЕНТЫ --- */
+
+#page-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--text-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar { 
+    padding: 15px 0;
+}
+
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+.nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+.nav-links li { margin-left: 25px; }
+.nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+.burger-menu { display: none; background: none; border: none; cursor: pointer; padding: 0; }
+.burger-line { display: block; width: 25px; height: 3px; background-color: var(--primary-color); margin: 5px 0; transition: all 0.3s ease-in-out; }
+
+.hero { background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)), url('https://images.unsplash.com/photo-1599252517684-aa0a67130099?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat; color: var(--text-light); display: flex; align-items: center; justify-content: center; text-align: center; min-height: 80vh; }
+.hero h1 { color: var(--text-light); font-size: 3em; }
+.hero p { font-size: 1.3rem; max-width: 600px; margin: 20px auto 30px; }
+
+.main-footer { background: var(--primary-color); color: var(--text-light); text-align: center; padding: 20px 0; }
+
+/* --- СЕТКИ (GRIDS) --- */
+.features-grid, .steps-grid-5, .service-cards-grid, .two-column-grid, .three-column-grid, .regions-grid, .contact-grid {
+    display: grid;
+    gap: 30px;
+}
+.features-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.steps-grid-5 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.service-cards-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.two-column-grid { grid-template-columns: 1fr 1fr; }
+.three-column-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.regions-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.contact-grid { grid-template-columns: 1fr 1fr; }
+
+/* --- КАРТОЧКИ И БЛОКИ --- */
+.feature-card, .step-card, .service-card, .info-block {
+    background: var(--text-light);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--primary-color);
+}
+.service-card { display: flex; flex-direction: column; }
+.service-brands { color: #777; font-style: italic; margin-top: 0; margin-bottom: 20px; }
+.service-footer { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 1.1rem; font-weight: 500; }
+.feature-card i, .info-block i { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px; display: block; }
+.info-block h3 { margin-bottom: 15px; }
+.region-card { background-color: var(--bg-light); padding: 15px 20px; border-radius: var(--border-radius); font-weight: 500; border: 1px solid var(--border-color); }
+.delivery-address { background-color: #e3f2fd; border-left: 5px solid var(--primary-color); padding: 20px 30px; margin: 40px auto 0; max-width: 800px; border-radius: 0 var(--border-radius) var(--border-radius) 0; }
+.subsection-title { margin-top: 50px; margin-bottom: 30px; font-size: 1.5rem; }
+
+/* --- СПИСКИ, ТАБЛИЦЫ, FAQ --- */
+.styled-list { list-style: none; padding: 0; }
+.styled-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+.styled-list li::before { content: '✅'; position: absolute; left: 0; }
+.table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.price-table { width: 100%; min-width: 600px; border-collapse: collapse; text-align: left; }
+.price-table th, .price-table td { padding: 12px 15px; border: 1px solid var(--border-color); }
+.price-table th { background-color: var(--primary-color); color: var(--text-light); }
+.price-table tr:nth-child(even) { background-color: var(--bg-light); }
+.faq-accordion { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border-color); }
+.faq-question { padding: 20px 0; cursor: pointer; font-weight: bold; font-size: 1.1rem; position: relative; }
+.faq-question::after { content: '+'; position: absolute; right: 0; font-size: 1.5rem; transition: transform 0.3s; }
+.faq-item.active .faq-question::after { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.faq-answer p { padding-bottom: 20px; }
+
+/* --- ХЛЕБНЫЕ КРОШКИ --- */
+.breadcrumbs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs .breadcrumb-separator {
+    margin: 0 8px;
+}
+
+.breadcrumbs .breadcrumb-active {
+    color: var(--text-color);
+}
+
+/* --- КАРТА РЕГИОНОВ --- */
+.map-container {
+    position: relative;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 50px 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.map-background-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300px; /* Размер иконки глобуса */
+    color: #e9ecef;
+    z-index: 1;
+}
+
+.regions-list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.regions-list span {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- СОЦИАЛЬНЫЕ ИКОНКИ --- */
+.social-icons { display: flex; align-items: center; gap: 15px; }
+.social-icons a { color: var(--primary-color); font-size: 1.5rem; transition: color 0.2s; }
+.social-icons a:hover { color: var(--secondary-color); }
+
+.main-footer .social-icons a { color: var(--text-light); }
+.main-footer .social-icons a:hover { color: var(--secondary-color); }
+
+.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+
+/* --- ССЫЛКИ НА МЕССЕНДЖЕРЫ --- */
+.messenger-links { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+.messenger-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+.messenger-link:hover { transform: scale(1.05); }
+.messenger-link i { font-size: 1.5rem; margin-right: 10px; }
+
+.messenger-link.telegram { background-color: #0088cc; }
+.messenger-link.whatsapp { background-color: #25D366; }
+
+/* --- КОНТАКТЫ И КАРТА --- */
+.contact-details ul { list-style: none; padding: 0; }
+.contact-details li { display: flex; align-items: flex-start; margin-bottom: 15px; }
+.contact-details i { font-size: 1.2rem; color: var(--primary-color); margin-right: 15px; width: 20px; text-align: center; margin-top: 4px; }
+.map-placeholder { background-color: #e9ecef; border: 2px dashed var(--border-color); border-radius: var(--border-radius); min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; color: #6c757d; }
+.map-placeholder::before { content: '\f3c5'; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 3rem; color: #ced4da; margin-bottom: 15px; }
+
+/* --- СТИЛИ КАЛЬКУЛЯТОРА --- */
+.calculator-wrapper { display: grid; grid-template-columns: 1fr; gap: 30px; max-width: 800px; margin: 40px auto 0; align-items: start; }
+@media (min-width: 768px) { .calculator-wrapper { grid-template-columns: 1fr 1fr; } }
+
+.calculator-form { background: var(--bg-light); padding: 30px; border-radius: var(--border-radius); border: 1px solid var(--border-color); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group select, .form-group input { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 1rem; box-sizing: border-box; }
+
+.calculator-result { background: var(--primary-color); color: var(--text-light); padding: 30px; border-radius: var(--border-radius); text-align: center; position: sticky; top: 100px; }
+.calculator-result .result-placeholder { opacity: 0.6; font-style: italic; }
+.calculator-result h3 { color: var(--text-light); margin-top: 0; margin-bottom: 10px; font-size: 1.2rem; }
+.calculator-result .price-range { font-size: 2.2rem; font-weight: bold; margin: 10px 0; color: var(--secondary-color); }
+.calculator-result .price-details { font-size: 0.9rem; opacity: 0.9; }
+
+.disclaimer { max-width: 800px; margin: 30px auto 0; text-align: center; font-style: italic; color: #6c757d; }
+
+/* --- АНИМАЦИИ И АДАПТИВНОСТЬ --- */
+.fade-in-element { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in-element.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+    .burger-menu { display: block; }
+    .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 70px; left: 0; background: var(--text-light); box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+    .nav-links.active { display: flex; }
+    .nav-links li { margin: 0; text-align: center; }
+    .nav-links a { padding: 15px; display: block; border-bottom: 1px solid var(--bg-light); }
+    .hero { min-height: 70vh; padding: 40px 0; }
+    .hero h1 { font-size: 2.2em; }
+    /* Переключаем ВСЕ сетки в одну колонку на мобильных */
+    .features-grid, .steps-grid-5, .service-cards-grid, .two-column-grid, .three-column-grid, .regions-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Адаптивные таблицы --- */
+    .responsive-table { min-width: 100%; } /* Убираем горизонтальный скролл */
+    .responsive-table thead { display: none; } /* Скрываем заголовки на мобильных */
+    .responsive-table tr { display: block; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: var(--border-radius); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .responsive-table td { display: block; text-align: right; padding: 12px 15px; border-bottom: 1px solid var(--border-color); }
+    .responsive-table td:last-child { border-bottom: none; }
+    .responsive-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-align: left;
+        margin-right: 10px;
+    }
+}
