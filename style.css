@@ -79,26 +79,42 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     .contact-grid, .two-column-grid { grid-template-columns: 1fr; }
 }```
 
-### 3. Файл `script.js` (Обновленный для FAQ)
+/* Дополнительные стили для страницы "Дальнобойщикам" */
+.info-block {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--primary-color);
+}
 
-```javascript
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // --- Логика для мобильного меню (бургера) ---
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    if (burgerMenu) {
-        burgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+.info-block i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
 
-    // --- Логика для аккордеона (FAQ) ---
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-        });
-    });
+.info-block h3 {
+    margin-bottom: 15px;
+}
 
-});
+.info-block.centered-block {
+    grid-column: 1 / -1; /* Растягиваем блок на всю ширину сетки */
+    text-align: center;
+}
+
+.styled-list {
+    list-style: none;
+    padding: 0;
+}
+.styled-list li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+.styled-list li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+}
