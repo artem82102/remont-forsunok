@@ -42,3 +42,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+### 3. Файл `script.js` (Обновленный для FAQ)
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Логика для мобильного меню (бургера) ---
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    if (burgerMenu) {
+        burgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // --- Логика для аккордеона (FAQ) ---
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+});
+
