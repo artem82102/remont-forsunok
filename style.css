@@ -197,3 +197,57 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     font-size: 1.1rem;
     font-weight: 500;
 }
+/* Стили для калькулятора на странице цен */
+.calculator-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: #fff;
+}
+
+.calculator-form .form-group {
+    margin-bottom: 25px;
+}
+.calculator-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.calculator-form select,
+.calculator-form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.calculator-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+.result-placeholder {
+    color: #777;
+    font-style: italic;
+    margin: 0;
+}
+.final-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+.disclaimer {
+    max-width: 800px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}```
