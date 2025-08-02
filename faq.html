@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Название страницы для вкладки браузера и SEO -->
-    <title>Специальные условия для дальнобойщиков | DieselProfi Волжский</title>
+    <title>Частые вопросы (FAQ) | DieselProfi Волжский</title>
     
     <!-- Иконочный шрифт -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,11 +20,11 @@
             <a href="index.html" class="logo">DieselProfi</a>
             <ul class="nav-links">
                 <li><a href="services.html">Услуги</a></li>
-                <!-- Отмечаем активную страницу классом 'active' -->
-                <li><a href="truckers.html" class="active">Дальнобойщикам</a></li>
+                <li><a href="truckers.html">Дальнобойщикам</a></li>
                 <li><a href="delivery.html">Доставка</a></li>
                 <li><a href="pricing.html">Цены</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <!-- Отмечаем активную страницу классом 'active' -->
+                <li><a href="faq.html" class="active">FAQ</a></li>
                 <li><a href="about.html">О нас</a></li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
@@ -36,50 +36,57 @@
         </div>
     </nav>
 
-    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ "ДЛЯ ДАЛЬНОБОЙЩИКОВ" -->
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ "FAQ" -->
     <main>
         <section>
             <div class="container">
-                <h2 class="text-center">Понимаем ваши проблемы</h2>
-                <div class="two-column-grid">
-                    <div class="info-block">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        <h3>Время — деньги</h3>
-                        <p>Каждый день простоя вашего грузовика стоит дорого. Мы это понимаем и работаем быстро: диагностика в день получения, ремонт в кратчайшие сроки и оперативная отправка обратно.</p>
+                <h2 class="text-center">Вопросы о доставке</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">Как долго идет посылка из Дагестана?</div>
+                        <div class="faq-answer">
+                            <p>Почтой России посылка обычно идет 5-7 дней, транспортной компанией СДЭК - 3-4 дня.</p>
+                        </div>
                     </div>
-                    <div class="info-block">
-                        <i class="fa-solid fa-handshake-simple"></i>
-                        <h3>Работаем удобно для вас</h3>
-                        <p>Принимаем форсунки любыми транспортными компаниями. Работаем с частниками без сложных договоров. Оплата — после результатов диагностики, консультации по телефону в любое время.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">Что делать, если форсунка потерялась при доставке?</div>
+                        <div class="faq-answer">
+                            <p>Это крайне редкий случай. Все отправления мы рекомендуем страховать на их полную стоимость. При утере застрахованного груза транспортная компания компенсирует ущерб.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="info-block centered-block">
-                     <i class="fa-solid fa- screwdriver-wrench"></i>
-                     <h3>Качество по доступной цене</h3>
-                     <p>Ремонт форсунки обходится до 3 раз дешевле покупки новой. При этом мы используем только оригинальные запчасти, даем гарантию 6 месяцев и всегда отправляем старые детали вместе с отремонтированными для вашей уверенности.</p>
                 </div>
             </div>
         </section>
 
         <section class="bg-light">
             <div class="container">
-                <h2 class="text-center">Специальные условия для дальнобойщиков</h2>
-                <div class="two-column-grid">
-                    <div class="info-block">
-                        <h3>Постоянным клиентам</h3>
-                        <ul class="styled-list">
-                            <li><strong>Скидка 5%</strong> при повторном обращении</li>
-                            <li><strong>Скидка 10%</strong> при ремонте 4+ форсунок одновременно</li>
-                            <li>Приоритетное обслуживание без очереди</li>
-                        </ul>
+                <h2 class="text-center">Вопросы о ремонте</h2>
+                 <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">Какую гарантию вы даете?</div>
+                        <div class="faq-answer">
+                            <p>Мы предоставляем гарантию 6 месяцев на все выполненные работы и замененные компоненты при условии соблюдения правил эксплуатации топливной системы.</p>
+                        </div>
                     </div>
-                    <div class="info-block">
-                        <h3>Срочный ремонт</h3>
-                         <ul class="styled-list">
-                            <li><strong>Ремонт за 1-2 дня</strong> (доплата 30%)</li>
-                            <li>Возможность работы в выходные дни (по согласованию)</li>
-                            <li>Организация экспресс-доставки в обе стороны</li>
-                        </ul>
+                    <div class="faq-item">
+                        <div class="faq-question">Можно ли отремонтировать сильно поврежденную форсунку?</div>
+                        <div class="faq-answer">
+                            <p>Точный ответ можно дать только после диагностики на стенде. В нашей практике около 80% форсунок, даже с серьезными неисправностями, подлежат ремонту, и это экономически более выгодно, чем покупка новой.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class="container">
+                <h2 class="text-center">Вопросы об оплате</h2>
+                 <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">Можно ли оплатить наложенным платежом?</div>
+                        <div class="faq-answer">
+                            <p>Нет, мы не работаем с наложенным платежом. Ремонт осуществляется по 50% предоплате после диагностики и согласования стоимости. Это стандартная практика, которая защищает и нас, и клиента от недоразумений.</p>
+                        </div>
                     </div>
                 </div>
             </div>
