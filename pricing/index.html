@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс-лист и калькулятор ремонта | DieselProfi</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="page-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">DieselProfi</a>
+                <!-- ... остальной код в base.html ... -->
+<ul class="nav-links">
+    <li><a href="/services/" >Услуги</a></li>
+    <li><a href="/truckers/" >Дальнобойщикам</a></li>
+    <li><a href="/delivery/" >Доставка</a></li>
+    <li><a href="/pricing/" class="active">Цены</a></li>
+    <li><a href="/faq/" >FAQ</a></li>
+    <li><a href="/about/" >О нас</a></li>
+    <li><a href="/contact/" >Контакты</a></li>
+</ul>
+<!-- ... остальной код в base.html ... -->
+                <button class="burger-menu" aria-label="Открыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></button>
+                <div class="social-icons">
+                    <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="container">
+            <nav class="breadcrumbs">
+  <a href="/">Главная</a>
+  <span class="breadcrumb-separator">/</span>
+  <span class="breadcrumb-active">Прайс-лист и калькулятор ремонта</span>
+</nav>
+        </div>
+        
+        
+<section>
+        <div class="container">
+            <h2 class="text-center">Стоимость диагностики (руб. за шт.)</h2>
+            <table class="price-table responsive-table">
+                <thead>
+                    <tr>
+                        <th>Тип форсунки</th>
+                        <th>Цена диагностики</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Тип форсунки">Common Rail грузовые</td>
+                        <td data-label="Цена диагностики">500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Тип форсунки">Насос-форсунки PDE/UIS</td>
+                        <td data-label="Цена диагностики">1000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Тип форсунки">PLD/UPS секции</td>
+                        <td data-label="Цена диагностики">1000 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Стоимость ремонта (руб. за шт.)</h2>
+            <table class="price-table responsive-table">
+                 <thead>
+                    <tr>
+                        <th>Тип форсунки</th>
+                        <th>Минимальная цена</th>
+                        <th>Максимальная цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Тип форсунки">Common Rail грузовые</td>
+                        <td data-label="Минимальная цена">4 000 ₽</td>
+                        <td data-label="Максимальная цена">14 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Тип форсунки">Насос-форсунки</td>
+                        <td data-label="Минимальная цена">4 000 ₽</td>
+                        <td data-label="Максимальная цена">20 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Тип форсунки">PLD/UPS секции</td>
+                        <td data-label="Минимальная цена">4 000 ₽</td>
+                        <td data-label="Максимальная цена">35 000 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- НОВАЯ СЕКЦИЯ С КАЛЬКУЛЯТОРОМ -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">Рассчитайте предварительную стоимость</h2>
+             <div class="calculator-wrapper">
+                <form id="calc-form" class="calculator-form">
+                    <div class="form-group"><label for="injector-type">1. Выберите тип форсунки:</label><select id="injector-type" name="injector-type"><option value="common_rail">Common Rail (грузовые)</option><option value="pde_uis">Насос-форсунки (PDE/UIS)</option><option value="pld_ups">PLD/UPS секции</option></select></div>
+                    <div class="form-group"><label for="quantity">2. Укажите количество (шт):</label><input type="number" id="quantity" name="quantity" value="1" min="1" max="12"></div>
+                    <div class="form-group"><label for="repair-type">3. Выберите тип ремонта:</label><select id="repair-type" name="repair-type"><option value="standard">Стандартный (чистка, регулировка)</option><option value="complex">Комплексный (с заменой деталей)</option></select></div>
+                </form>
+                <div id="calc-result" class="calculator-result"><p class="result-placeholder">Здесь появится результат расчета</p></div>
+            </div>
+             <div class="disclaimer"><p><strong>Важно:</strong> калькулятор показывает предварительную стоимость. Точная цена будет известна только после диагностики на стенде.</p></div>
+        </div>
+    </section>
+    </main>
+
+    <footer id="page-footer" class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 DieselProfi.</p>
+                <div class="social-icons">
+                    <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
