@@ -1,72 +1,118 @@
-<!-- ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ "УСЛУГИ" (с карточками) -->
-<main>
-    <section>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги по ремонту форсунок | DieselProfi Волжский</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- НАВИГАЦИЯ (одинаковая для всех страниц) -->
+    <nav class="navbar">
         <div class="container">
-            <h2 class="text-center">Ремонт форсунок по типам систем</h2>
-            
-            <div class="service-cards-grid">
-                <!-- Карточка 1: Common Rail -->
-                <div class="service-card">
-                    <h3>Common Rail</h3>
-                    <p class="service-brands">(Bosch, Delphi, Denso, Siemens)</p>
-                    <p><strong>Применение:</strong> MAN TGA/TGS/TGX, Mercedes Actros/Axor, Scania, Volvo FH/FM.</p>
-                    <div class="service-footer">
-                        <strong>Стоимость:</strong> 4 000 – 14 000 ₽<br>
-                        <strong>Срок:</strong> 3-5 дней
-                    </div>
-                </div>
+            <a href="index.html" class="logo">DieselProfi</a>
+            <ul class="nav-links">
+                <!-- Отмечаем активную страницу классом 'active' -->
+                <li><a href="services.html" class="active">Услуги</a></li>
+                <li><a href="truckers.html">Дальнобойщикам</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="pricing.html">Цены</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </nav>
 
-                <!-- Карточка 2: Насос-форсунки -->
-                <div class="service-card">
-                    <h3>Насос-форсунки</h3>
-                    <p class="service-brands">(PDE / UIS)</p>
-                    <p><strong>Применение:</strong> Mercedes Actros, Volvo FH12, MAN TGA ранних годов. Высокое давление впрыска до 2000 бар.</p>
-                    <div class="service-footer">
-                        <strong>Стоимость:</strong> 4 000 – 20 000 ₽<br>
-                        <strong>Срок:</strong> 5-7 дней
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ СТРАНИЦЫ "УСЛУГИ" (с карточками) -->
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="text-center">Ремонт форсунок по типам систем</h2>
+                
+                <div class="service-cards-grid">
+                    <!-- Карточка 1: Common Rail -->
+                    <div class="service-card">
+                        <h3>Common Rail</h3>
+                        <p class="service-brands">(Bosch, Delphi, Denso, Siemens)</p>
+                        <p><strong>Применение:</strong> MAN TGA/TGS/TGX, Mercedes Actros/Axor, Scania, Volvo FH/FM.</p>
+                        <div class="service-footer">
+                            <strong>Стоимость:</strong> 4 000 – 14 000 ₽<br>
+                            <strong>Срок:</strong> 3-5 дней
+                        </div>
                     </div>
-                </div>
 
-                <!-- Карточка 3: PLD-секции -->
-                <div class="service-card">
-                    <h3>PLD-секции</h3>
-                    <p class="service-brands">(PLD / UPS)</p>
-                    <p><strong>Применение:</strong> Mercedes Actros/Axor, DAF 95XF. Самые технически сложные системы.</p>
-                     <div class="service-footer">
-                        <strong>Стоимость:</strong> 4 000 – 35 000 ₽<br>
-                        <strong>Срок:</strong> 7-10 дней
+                    <!-- Карточка 2: Насос-форсунки -->
+                    <div class="service-card">
+                        <h3>Насос-форсунки</h3>
+                        <p class="service-brands">(PDE / UIS)</p>
+                        <p><strong>Применение:</strong> Mercedes Actros, Volvo FH12, MAN TGA ранних годов. Высокое давление впрыска до 2000 бар.</p>
+                        <div class="service-footer">
+                            <strong>Стоимость:</strong> 4 000 – 20 000 ₽<br>
+                            <strong>Срок:</strong> 5-7 дней
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3: PLD-секции -->
+                    <div class="service-card">
+                        <h3>PLD-секции</h3>
+                        <p class="service-brands">(PLD / UPS)</p>
+                        <p><strong>Применение:</strong> Mercedes Actros/Axor, DAF 95XF. Самые технически сложные системы.</p>
+                         <div class="service-footer">
+                            <strong>Стоимость:</strong> 4 000 – 35 000 ₽<br>
+                            <strong>Срок:</strong> 7-10 дней
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="bg-light">
-        <div class="container">
-            <h2 class="text-center">Диагностика и проблемы</h2>
-            <div class="two-column-grid">
-                <div>
-                    <h3>Основные симптомы неисправностей:</h3>
-                    <ul class="styled-list">
-                        <li>Затрудненный запуск двигателя</li>
-                        <li>Неравномерная работа на холостых оборотах</li>
-                        <li>Потеря мощности и приемистости</li>
-                        <li>Повышенный расход топлива</li>
-                        <li>Дымность выхлопа (черный, сизый дым)</li>
-                        <li>Посторонние звуки из двигателя</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Диагностика включает:</h3>
-                    <ul class="styled-list">
-                        <li>Проверка давления впрыска</li>
-                        <li>Контроль формы факела распыления</li>
-                        <li>Измерение количества подаваемого топлива</li>
-                        <li>Проверка герметичности</li>
-                        <li><strong>Стоимость диагностики: 500-1000 руб. за форсунку</strong></li>
-                    </ul>
+        <section class="bg-light">
+            <div class="container">
+                <h2 class="text-center">Диагностика и проблемы</h2>
+                <div class="two-column-grid">
+                    <div>
+                        <h3>Основные симптомы неисправностей:</h3>
+                        <ul class="styled-list">
+                            <li>Затрудненный запуск двигателя</li>
+                            <li>Неравномерная работа на холостых оборотах</li>
+                            <li>Потеря мощности и приемистости</li>
+                            <li>Повышенный расход топлива</li>
+                            <li>Дымность выхлопа (черный, сизый дым)</li>
+                            <li>Посторонние звуки из двигателя</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Диагностика включает:</h3>
+                        <ul class="styled-list">
+                            <li>Проверка давления впрыска</li>
+                            <li>Контроль формы факела распыления</li>
+                            <li>Измерение количества подаваемого топлива</li>
+                            <li>Проверка герметичности</li>
+                            <li><strong>Стоимость диагностики: 500-1000 руб. за форсунку</strong></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ (одинаковый для всех страниц) -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 DieselProfi. Ремонт форсунок для грузовых автомобилей.</p>
         </div>
-    </section>
-</main>
+    </footer>
+
+    <!-- Подключаем наш скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
