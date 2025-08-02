@@ -146,3 +146,13 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     font-weight: 500;
     border: 1px solid var(--border-color);
 }
+/* Дополнительные стили для страницы "Контакты" */
+.map-placeholder {
+    background-color: #e9ecef;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 80px 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.2rem;
+}
