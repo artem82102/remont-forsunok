@@ -118,3 +118,12 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     position: absolute;
     left: 0;
 }
+/* Дополнительные стили для страницы "Доставка" */
+.delivery-address {
+    background-color: #e3f2fd;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px 30px;
+    margin: 40px auto 0;
+    max-width: 800px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
