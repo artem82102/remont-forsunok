@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
                 
+                // Сначала закрываем все другие открытые элементы
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
 
+                // Открываем или закрываем текущий элемент
                 if (!isActive) {
                     item.classList.add('active');
                     answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -60,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         calcForm.addEventListener('submit', function(event) {
             event.preventDefault();
-
             const injectorType = document.getElementById('injector-type').value;
             const quantity = parseInt(document.getElementById('quantity').value, 10);
             const repairType = document.getElementById('repair-type').value;
@@ -78,4 +79,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-}); // <-- Здесь заканчивается DOMContentLoaded
+});
