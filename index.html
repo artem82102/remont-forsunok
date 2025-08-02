@@ -3,144 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт дизельных форсунок в Волжском — Современная верстка</title>
-    <meta name="description" content="Специализированный сервис по ремонту дизельных форсунок. Современный подход к верстке на CSS Grid и Flexbox.">
-    
-    <!-- Иконочный шрифт (Font Awesome) -->
+    <title>Ремонт форсунок грузовиков в Волжском | Доставка по России</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Подключаем наши стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="container">
-            <a href="#home" class="logo">DieselProfi</a>
+            <a href="index.html" class="logo">DieselProfi</a>
             <ul class="nav-links">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#how-to-send">Как отправить</a></li>
-                <li><a href="#pricing">Цены</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="truckers.html">Дальнобойщикам</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="pricing.html">Цены</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
             </ul>
-            <button class="burger-menu" aria-label="Открыть меню">
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-                <span class="burger-line"></span>
-            </button>
+            <button class="burger-menu" aria-label="Открыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></button>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="container">
-            <h1>Ремонт дизельных форсунок с гарантией и доставкой по России</h1>
-            <p>Специализированный сервис. Работаем с водителями и частными клиентами без посредников.</p>
-            <a href="#services" class="btn">Узнать подробнее</a>
+            <h1>Профессиональный ремонт форсунок грузовых автомобилей</h1>
+            <p>Работаем с дальнобойщиками по всей России через почтовую доставку</p>
+            <a href="contact.html" class="btn">Отправить заявку</a>
         </div>
     </header>
 
     <main>
-        <section id="about">
-            <div class="container text-center">
-                <h2>Надежный партнер по ремонту</h2>
-                <p class="lead">Мы — команда профессионалов, специализируемся на ремонте дизельных форсунок с 2019 года. Гарантируем честный подход и индивидуальное внимание к каждому заказу, потому что для нас важна ваша рекомендация.</p>
-            </div>
-        </section>
-
-        <section id="services" class="bg-light">
+        <section>
             <div class="container">
-                <h2 class="text-center">Что мы предлагаем</h2>
-                <ul class="services-list">
-                    <li><i class="fa-solid fa-check"></i>Полная диагностика на стенде</li>
-                    <li><i class="fa-solid fa-check"></i>Разборка и ультразвуковая очистка</li>
-                    <li><i class="fa-solid fa-check"></i>Замена неисправных компонентов</li>
-                    <li><i class="fa-solid fa-check"></i>Регулировка, настройка и контроль</li>
-                    <li><i class="fa-solid fa-check"></i>Гарантия на работы и детали</li>
-                </ul>
-                <p class="text-center note">Обслуживаем системы <strong>Common Rail (Bosch, Delphi, Denso и др.), насос-форсунки и PLD.</strong></p>
-            </div>
-        </section>
-
-        <section id="how-to-send">
-            <div class="container">
-                <h2 class="text-center">Как отправить форсунки на ремонт</h2>
-                <div class="steps-grid">
-                    <div class="step-card"><h3>Шаг 1: Упаковка</h3><p>Аккуратно упакуйте детали и вложите записку с вашим телефоном.</p></div>
-                    <div class="step-card"><h3>Шаг 2: Данные</h3><p>Укажите ФИО, обратный адрес и предпочтительную ТК.</p></div>
-                    <div class="step-card"><h3>Шаг 3: Отправка</h3><p>Отправьте любой ТК (СДЭК, ПЭК, Энергия) на наш адрес.</p></div>
-                    <div class="step-card"><h3>Шаг 4: Уведомление</h3><p>Пришлите фото накладной (ТТН) в WhatsApp или Telegram.</p></div>
-                </div>
-                <div class="address-box">
-                    <h4>Адрес для отправки:</h4>
-                    <p><strong>Город:</strong> г. Волжский, Волгоградская область<br><strong>Получатель:</strong> [Здесь ФИО сотрудника]<br><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+                <h2 class="text-center">Наши преимущества</h2>
+                <div class="features-grid">
+                    <div class="feature-card"><i class="fa-solid fa-truck-fast"></i><h3>Опыт с дальнобойщиками</h3><p>Понимаем ваши задачи и ценим ваше время.</p></div>
+                    <div class="feature-card"><i class="fa-solid fa-box-open"></i><h3>Удобная доставка</h3><p>Принимаем и отправляем форсунки по всей России.</p></div>
+                    <div class="feature-card"><i class="fa-solid fa-handshake"></i><h3>Работа с частниками</h3><p>Простая и понятная схема работы без договоров.</p></div>
+                    <div class="feature-card"><i class="fa-solid fa-gauge-high"></i><h3>Быстрые сроки</h3><p>Диагностика за 1 день, ремонт в течение 3-5 дней.</p></div>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="bg-light">
+        <section class="bg-light">
             <div class="container">
-                <h2 class="text-center">Стоимость и сроки ремонта</h2>
-                <div class="pricing-grid">
-                    <div class="price-card"><h3>Диагностика</h3><p class="price">от 1000 ₽</p><p>Проверка на стенде для выявления неисправностей.</p></div>
-                    <div class="price-card"><h3>Стандартный ремонт</h3><p class="price">от 3000 ₽</p><p>Чистка, замена мелких комплектующих, регулировка.</p></div>
-                    <div class="price-card"><h3>Восстановление</h3><p class="price">от 5000 ₽</p><p>Комплексная замена деталей и настройка "под ключ".</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="reviews">
-            <div class="container">
-                <h2 class="text-center">Что говорят наши клиенты</h2>
-                <div class="reviews-grid">
-                    <div class="review-card"><p>“Отправил из Хасавюрта, сделали быстро, всё работает отлично. Спасибо за честность!”</p><footer>— Магомед, г. Хасавюрт</footer></div>
-                    <div class="review-card"><p>“Ремонт занял два дня, отгрузили обратно день в день. Рекомендую!”</p><footer>— Арсен, г. Дербент</footer></div>
-                    <div class="review-card"><p>“Сервис на пятерку, специалисты знают свое дело. Теперь советую всем своим.”</p><footer>— Заур, г. Махачкала</footer></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="bg-light">
-            <div class="container">
-                <h2 class="text-center">Частые вопросы</h2>
-                <div class="faq-accordion">
-                    <div class="faq-item"><div class="faq-question">Какие форсунки вы ремонтируете?</div><div class="faq-answer"><p>Только дизельные: от грузовых авто, автобусов, микроавтобусов, спецтехники.</p></div></div>
-                    <div class="faq-item"><div class="faq-question">Можно отправить форсунку из другого города?</div><div class="faq-answer"><p>Да, мы работаем по всей России, получаем посылки ежедневно.</p></div></div>
-                    <div class="faq-item"><div class="faq-question">Делаете ли бензиновые форсунки?</div><div class="faq-answer"><p>Нет, мы работаем исключительно с дизельными топливными системами.</p></div></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2 class="text-center">Контакты</h2>
-                <div class="contact-grid">
-                    <div class="contact-details">
-                        <h3>Свяжитесь с нами:</h3>
-                        <ul>
-                            <li><i class="fa-solid fa-location-dot"></i><strong>Адрес:</strong> г. Волжский, Волгоградская область</li>
-                            <li><i class="fa-solid fa-phone"></i><strong>Телефон:</strong> <a href="tel:+7XXXXXXXXXX">+7 (XXX) XXX-XX-XX</a></li>
-                            <li><i class="fa-brands fa-whatsapp"></i><strong>WhatsApp:</strong> <a href="https://wa.me/7XXXXXXXXXX" target="_blank">Написать в WhatsApp</a></li>
-                            <li><i class="fa-brands fa-telegram"></i><strong>Telegram:</strong> <a href="https://t.me/your_username" target="_blank">Написать в Telegram</a></li>
-                        </ul>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Оставьте заявку!</h3>
-                        <form><input type="text" placeholder="Ваше имя" required><input type="tel" placeholder="Ваш телефон" required><textarea placeholder="Ваш вопрос"></textarea><button type="submit" class="btn">Оставить заявку</button></form>
-                    </div>
+                <h2 class="text-center">Схема работы</h2>
+                <div class="steps-grid-5">
+                    <div class="step-card"><h3>1. Отправляете</h3><p>Отправляете форсунки почтой или ТК.</p></div>
+                    <div class="step-card"><h3>2. Диагностируем</h3><p>Звоним с результатами в день получения.</p></div>
+                    <div class="step-card"><h3>3. Согласовываем</h3><p>Озвучиваем точную стоимость ремонта.</p></div>
+                    <div class="step-card"><h3>4. Ремонтируем</h3><p>Используем оригинальные запчасти.</p></div>
+                    <div class="step-card"><h3>5. Возвращаем</h3><p>Надежно упаковываем и высылаем обратно.</p></div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 DieselProfi. Все права защищены.</p>
-        </div>
+        <div class="container"><p>© 2025 DieselProfi. Ремонт форсунок для грузовиков.</p></div>
     </footer>
-
-    <!-- Подключаем наш скрипт -->
     <script src="script.js"></script>
 </body>
 </html>
