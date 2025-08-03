@@ -62,7 +62,7 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     color: var(--text-light);
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Сдвигаем контент влево */
+    justify-content: center; /* Возвращаем центрирование */
     min-height: 80vh;
 }
 .hero .container {
