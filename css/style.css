@@ -62,20 +62,21 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     color: var(--text-light);
     display: flex;
     align-items: center;
-    justify-content: center; /* Возвращаем центрирование */
     min-height: 80vh;
 }
 .hero .container {
+    /* Этот контейнер уже центрирован по умолчанию */
+}
+.hero-text {
     text-align: left;
+    max-width: 600px; /* Ограничиваем ширину текстового блока */
 }
 .hero h1 {
     color: var(--text-light);
     font-size: 3em;
-    max-width: 600px;
 }
 .hero p {
     font-size: 1.3rem;
-    max-width: 550px;
     margin: 20px 0 30px;
 }
 
