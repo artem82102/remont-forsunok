@@ -60,9 +60,11 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
 .hero { 
     background: linear-gradient(rgba(20, 30, 40, 0.7), rgba(20, 30, 40, 0.7)), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
     color: var(--text-light);
+    min-height: 80vh;
+    padding: 150px 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    min-height: 80vh;
 }
 .hero .container {
     /* Этот контейнер уже центрирован по умолчанию */
