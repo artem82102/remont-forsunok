@@ -57,7 +57,7 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
 .burger-menu { display: none; background: none; border: none; cursor: pointer; padding: 0; }
 .burger-line { display: block; width: 25px; height: 3px; background-color: var(--primary-color); margin: 5px 0; transition: all 0.3s ease-in-out; }
 
-.hero { background: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://images.pexels.com/photos/6870333/pexels-photo-6870333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat; color: var(--text-light); display: flex; align-items: center; justify-content: center; text-align: center; min-height: 80vh; }
+.hero { background: linear-gradient(rgba(20, 30, 40, 0.7), rgba(20, 30, 40, 0.7)), url('https://images.pexels.com/photos/4491448/pexels-photo-4491448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat; color: var(--text-light); display: flex; align-items: center; justify-content: center; text-align: center; min-height: 80vh; }
 .hero h1 { color: var(--text-light); font-size: 3em; }
 .hero p { font-size: 1.3rem; max-width: 600px; margin: 20px auto 30px; }
 
@@ -257,11 +257,12 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
     .owner-block { grid-template-columns: 1fr 2fr; }
 }
 .owner-photo img {
-    width: 100%;
-    max-width: 250px;
+    width: 300px; /* Увеличиваем размер */
+    height: 300px; /* Увеличиваем размер */
     border-radius: 50%;
     margin: 0 auto;
     display: block;
+    object-fit: cover; /* Гарантирует, что фото не исказится */
 }
 .owner-text strong {
     color: var(--primary-color);
