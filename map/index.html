@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта успеха | DieselProfi</title>
+    <link rel="stylesheet" href="/remont-forsunok/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="page-header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/remont-forsunok/" class="logo">DieselProfi</a>
+                <!-- ... остальной код в base.html ... -->
+<ul class="nav-links">
+    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
+    <li><a href="/remont-forsunok/map/" class="active">Карта успеха</a></li>
+    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
+    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
+    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
+    <li><a href="/remont-forsunok/faq/" >FAQ</a></li>
+    <li><a href="/remont-forsunok/about/" >О нас</a></li>
+    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
+</ul>
+<!-- ... остальной код в base.html ... -->
+                <button class="burger-menu" aria-label="Открыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></button>
+                <div class="social-icons">
+                    <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="container">
+            <nav class="breadcrumbs">
+  <a href="/">Главная</a>
+  <span class="breadcrumb-separator">/</span>
+  <span class="breadcrumb-active">Карта успеха</span>
+</nav>
+        </div>
+        
+        
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<section id="map-page">
+    <div class="container">
+        <h1 class="text-center">Карта успеха наших клиентов</h1>
+        <p class="lead text-center">На этой карте отмечены регионы, откуда нам доверяют и присылают форсунки на ремонт. <br>Это лучшее доказательство нашей надежности и качества работы.</p>
+        <div id="map-container"></div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var map = L.map('map-container').setView([47.23, 42.88], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Маркеры
+    L.marker([42.98, 47.50]).addTo(map).bindPopup('<b>Республика Дагестан</b><br>Более 50 успешных ремонтов');
+    L.marker([43.31, 45.69]).addTo(map).bindPopup('<b>Чеченская Республика</b><br>Регулярные заказы на ремонт Common Rail');
+    L.marker([45.08, 42.25]).addTo(map).bindPopup('<b>Ставропольский край</b><br>Ремонт насос-форсунок для Volvo и Scania');
+    L.marker([47.22, 39.72]).addTo(map).bindPopup('<b>Ростовская область</b><br>Экспресс-ремонт для транзитных грузовиков');
+});
+</script>
+
+    </main>
+
+    <footer id="page-footer" class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 DieselProfi.</p>
+                <div class="social-icons">
+                    <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/remont-forsunok/js/script.js"></script>
+</body>
+</html>

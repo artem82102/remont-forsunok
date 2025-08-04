@@ -529,6 +529,20 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
 .disclaimer { max-width: 800px; margin: 30px auto 0; text-align: center; font-style: italic; color: #6c757d; }
 
 /* --- АНИМАЦИИ И АДАПТИВНОСТЬ --- */
+
+/* --- Страница с картой --- */
+#map-page h1 {
+    margin-bottom: 20px;
+}
+
+#map-container {
+    height: 600px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    margin-top: 40px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
 .fade-in-element { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
 .fade-in-element.is-visible { opacity: 1; transform: translateY(0); }
 
