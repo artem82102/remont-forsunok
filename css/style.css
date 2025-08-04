@@ -228,6 +228,67 @@ h2::after { content: ''; display: block; width: 60px; height: 4px; background: v
 
 /* --- СТИЛИ ДЛЯ НОВЫХ БЛОКОВ --- */
 
+/* --- Лента с логотипами --- */
+#trusted-brands {
+    padding: 40px 0;
+}
+
+.section-subtitle {
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.scroller {
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller__inner {
+    display: flex;
+    flex-wrap: wrap; /* Для мобильных */
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+.scroller__inner li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroller__inner img {
+    height: 40px;
+    max-width: 150px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.scroller__inner img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 25px));
+    }
+}
+
 /* Блок экспертности */
 .expertise-block {
     display: grid;
