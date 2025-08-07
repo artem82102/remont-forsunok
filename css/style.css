@@ -1175,6 +1175,12 @@ main:not(.main--homepage) {
 }
 
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+    .hero p {
+        font-size: var(--font-size-lg);
+    }
     .burger-menu {
         display: block;
         background: none;
