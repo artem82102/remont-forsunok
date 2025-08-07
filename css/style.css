@@ -735,7 +735,8 @@ a:hover {
     }
     .responsive-table td {
         display: block;
-        text-align: right;
+        text-align: center;
+        padding: var(--spacing-4);
         padding-left: 50%;
         position: relative;
         border-bottom: 1px solid var(--color-neutral-200);
