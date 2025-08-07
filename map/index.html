@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карта успеха | DieselProfi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/remont-forsunok/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header id="page-header">
-        <nav class="navbar">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar">
                 <a href="/remont-forsunok/" class="logo">DieselProfi</a>
-                <!-- ... остальной код в base.html ... -->
-<ul class="nav-links">
-    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
-    <li><a href="/remont-forsunok/map/" class="active">Карта успеха</a></li>
-    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
-    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
-    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
-    <li><a href="/remont-forsunok/faq/" >FAQ</a></li>
-    <li><a href="/remont-forsunok/about/" >О нас</a></li>
-    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
-</ul>
-<!-- ... остальной код в base.html ... -->
-                <button class="burger-menu" aria-label="Открыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></button>
+                <ul class="nav-links">
+                    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
+                    <li><a href="/remont-forsunok/map/" class="active">Карта успеха</a></li>
+                    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
+                    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
+                    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
+                    <li><a href="/remont-forsunok/faq/" >FAQ</a></li>
+                    <li><a href="/remont-forsunok/about/" >О нас</a></li>
+                    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
+                </ul>
                 <div class="social-icons">
                     <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
-            </div>
-        </nav>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="">
         
-        <div class="container">
+        <div class="page-intro container">
             <nav class="breadcrumbs">
   <a href="/">Главная</a>
   <span class="breadcrumb-separator">/</span>
@@ -50,7 +55,7 @@
 <section id="map-page">
     <div class="container">
         <h1 class="text-center">Карта успеха наших клиентов</h1>
-        <p class="lead text-center">На этой карте отмечены регионы, откуда нам доверяют и присылают форсунки на ремонт. <br>Это лучшее доказательство нашей надежности и качества работы.</p>
+        <p class="lead text-center">На этой карте отмечены регионы, откуда нам доверяют и присылают форсунки на ремонт. Это лучшее доказательство нашей надежности и качества работы.</p>
         <div id="map-container"></div>
     </div>
 </section>
@@ -74,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     </main>
 
-    <footer id="page-footer" class="main-footer">
+    <footer id="page-footer">
         <div class="container">
             <div class="footer-content">
-                <p>© 2025 DieselProfi.</p>
+                <p>© 2025 DieselProfi. Все права защищены.</p>
                 <div class="social-icons">
                     <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -85,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
         </div>
     </footer>
-    
+
     <script src="/remont-forsunok/js/script.js"></script>
 </body>
 </html>

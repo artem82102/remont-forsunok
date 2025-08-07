@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Опыт и оборудование | DieselProfi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/remont-forsunok/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header id="page-header">
-        <nav class="navbar">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar">
                 <a href="/remont-forsunok/" class="logo">DieselProfi</a>
-                <!-- ... остальной код в base.html ... -->
-<ul class="nav-links">
-    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
-    <li><a href="/remont-forsunok/map/" >Карта успеха</a></li>
-    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
-    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
-    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
-    <li><a href="/remont-forsunok/faq/" >FAQ</a></li>
-    <li><a href="/remont-forsunok/about/" class="active">О нас</a></li>
-    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
-</ul>
-<!-- ... остальной код в base.html ... -->
-                <button class="burger-menu" aria-label="Открыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></button>
+                <ul class="nav-links">
+                    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
+                    <li><a href="/remont-forsunok/map/" >Карта успеха</a></li>
+                    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
+                    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
+                    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
+                    <li><a href="/remont-forsunok/faq/" >FAQ</a></li>
+                    <li><a href="/remont-forsunok/about/" class="active">О нас</a></li>
+                    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
+                </ul>
                 <div class="social-icons">
                     <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
-            </div>
-        </nav>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="">
         
-        <div class="container">
+        <div class="page-intro container">
             <nav class="breadcrumbs">
   <a href="/">Главная</a>
   <span class="breadcrumb-separator">/</span>
@@ -45,18 +50,19 @@
         
         
 <section>
-    <div class="container text-center">
-        <h2>Опыт работы с дальнобойщиками</h2>
-        <p class="lead">Наша компания уже 5 лет специализируется на ремонте дизельных форсунок. За это время мы отремонтировали более 3000 форсунок для водителей-дальнобойщиков со всей России. Мы гордимся тем, что нам доверяют, и ценим каждого клиента.</p>
-        
-        <h3 class="subsection-title">Основная география наших клиентов:</h3>
-        <div class="map-container">
-            <i class="fa-solid fa-globe-americas map-background-icon"></i>
-            <div class="regions-list">
-                <span>Республика Дагестан</span>
-                <span>Чеченская Республика</span>
-                <span>Ставропольский край</span>
-                <span>Ростовская область</span>
+    <div class="container">
+        <div class="card">
+            <h2 class="text-center">Опыт работы с дальнобойщиками</h2>
+            <p class="lead text-center">Наша компания уже 5 лет специализируется на ремонте дизельных форсунок. За это время мы отремонтировали более 3000 форсунок для водителей-дальнобойщиков со всей России. Мы гордимся тем, что нам доверяют, и ценим каждого клиента.</p>
+            
+            <div class="geography-block">
+                <h3>Основная география наших клиентов:</h3>
+                <div class="regions-list">
+                    <span><i class="fa-solid fa-map-marker-alt"></i> Республика Дагестан</span>
+                    <span><i class="fa-solid fa-map-marker-alt"></i> Чеченская Республика</span>
+                    <span><i class="fa-solid fa-map-marker-alt"></i> Ставропольский край</span>
+                    <span><i class="fa-solid fa-map-marker-alt"></i> Ростовская область</span>
+                </div>
             </div>
         </div>
     </div>
@@ -66,12 +72,12 @@
     <div class="container">
         <h2 class="text-center">Наше оборудование</h2>
         <div class="two-column-grid">
-            <div class="info-block">
+            <div class="info-block info-block--centered">
                 <i class="fa-solid fa-microscope"></i>
                 <h3>Стенды для диагностики</h3>
                 <p>Используем профессиональные стенды <strong>Hartridge AVM2-PC</strong> и <strong>Bosch EPS 815</strong> для точной диагностики всех типов форсунок, включая Common Rail.</p>
             </div>
-             <div class="info-block">
+             <div class="info-block info-block--centered">
                 <i class="fa-solid fa-water"></i>
                 <h3>Профессиональная очистка</h3>
                 <p>Применяем ультразвуковые ванны для полной и бережной очистки внутренних компонентов форсунок от нагара и отложений.</p>
@@ -91,12 +97,13 @@
         </div>
     </div>
 </section>
+
     </main>
 
-    <footer id="page-footer" class="main-footer">
+    <footer id="page-footer">
         <div class="container">
             <div class="footer-content">
-                <p>© 2025 DieselProfi.</p>
+                <p>© 2025 DieselProfi. Все права защищены.</p>
                 <div class="social-icons">
                     <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -104,7 +111,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="/remont-forsunok/js/script.js"></script>
 </body>
 </html>

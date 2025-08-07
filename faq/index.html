@@ -4,38 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Частые вопросы (FAQ) | DieselProfi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/remont-forsunok/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header id="page-header">
-        <nav class="navbar">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar">
                 <a href="/remont-forsunok/" class="logo">DieselProfi</a>
-                <!-- ... остальной код в base.html ... -->
-<ul class="nav-links">
-    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
-    <li><a href="/remont-forsunok/map/" >Карта успеха</a></li>
-    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
-    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
-    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
-    <li><a href="/remont-forsunok/faq/" class="active">FAQ</a></li>
-    <li><a href="/remont-forsunok/about/" >О нас</a></li>
-    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
-</ul>
-<!-- ... остальной код в base.html ... -->
-                <button class="burger-menu" aria-label="Открыть меню"><span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span></button>
+                <ul class="nav-links">
+                    <li><a href="/remont-forsunok/services/" >Услуги</a></li>
+                    <li><a href="/remont-forsunok/map/" >Карта успеха</a></li>
+                    <li><a href="/remont-forsunok/truckers/" >Дальнобойщикам</a></li>
+                    <li><a href="/remont-forsunok/delivery/" >Доставка</a></li>
+                    <li><a href="/remont-forsunok/pricing/" >Цены</a></li>
+                    <li><a href="/remont-forsunok/faq/" class="active">FAQ</a></li>
+                    <li><a href="/remont-forsunok/about/" >О нас</a></li>
+                    <li><a href="/remont-forsunok/contact/" >Контакты</a></li>
+                </ul>
                 <div class="social-icons">
                     <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
-            </div>
-        </nav>
+                <button class="burger-menu" aria-label="Открыть меню">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="">
         
-        <div class="container">
+        <div class="page-intro container">
             <nav class="breadcrumbs">
   <a href="/">Главная</a>
   <span class="breadcrumb-separator">/</span>
@@ -46,18 +51,26 @@
         
 <section>
     <div class="container">
-        <h2 class="text-center">Вопросы о доставке</h2>
-        <div class="faq-accordion">
-            <div class="faq-item">
-                <div class="faq-question">Как долго идет посылка из Дагестана?</div>
-                <div class="faq-answer">
-                    <p>Почтой России посылка обычно идет 5-7 дней, транспортной компанией СДЭК - 3-4 дня.</p>
+        <div class="faq-section-card">
+            <h2 class="text-center">Вопросы о доставке</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как долго идет посылка из Дагестана?</span>
+                        <i class="faq-icon fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Почтой России посылка обычно идет 5-7 дней, транспортной компанией СДЭК - 3-4 дня.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Что делать, если форсунка потерялась при доставке?</div>
-                <div class="faq-answer">
-                    <p>Это крайне редкий случай. Все отправления мы рекомендуем страховать на их полную стоимость. При утере застрахованного груза транспортная компания компенсирует ущерб.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Что делать, если форсунка потерялась при доставке?</span>
+                        <i class="faq-icon fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Это крайне редкий случай. Все отправления мы рекомендуем страховать на их полную стоимость. При утере застрахованного груза транспортная компания компенсирует ущерб.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,18 +79,26 @@
 
 <section class="bg-light">
     <div class="container">
-        <h2 class="text-center">Вопросы о ремонте</h2>
-         <div class="faq-accordion">
-            <div class="faq-item">
-                <div class="faq-question">Какую гарантию вы даете?</div>
-                <div class="faq-answer">
-                    <p>Мы предоставляем гарантию 6 месяцев на все выполненные работы и замененные компоненты при условии соблюдения правил эксплуатации топливной системы.</p>
+        <div class="faq-section-card">
+            <h2 class="text-center">Вопросы о ремонте</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какую гарантию вы даете?</span>
+                        <i class="faq-icon fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы предоставляем гарантию 6 месяцев на все выполненные работы и замененные компоненты при условии соблюдения правил эксплуатации топливной системы.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Можно ли отремонтировать сильно поврежденную форсунку?</div>
-                <div class="faq-answer">
-                    <p>Точный ответ можно дать только после диагностики на стенде. В нашей практике около 80% форсунок, даже с серьезными неисправностями, подлежат ремонту, и это экономически более выгодно, чем покупка новой.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли отремонтировать сильно поврежденную форсунку?</span>
+                        <i class="faq-icon fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Точный ответ можно дать только после диагностики на стенде. В нашей практике около 80% форсунок, даже с серьезными неисправностями, подлежат ремонту, и это экономически более выгодно, чем покупка новой.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,23 +107,29 @@
 
 <section>
     <div class="container">
-        <h2 class="text-center">Вопросы об оплате</h2>
-         <div class="faq-accordion">
-            <div class="faq-item">
-                <div class="faq-question">Можно ли оплатить наложенным платежом?</div>
-                <div class="faq-answer">
-                    <p>Нет, мы не работаем с наложенным платежом. Ремонт осуществляется по 50% предоплате после диагностики и согласования стоимости. Это стандартная практика, которая защищает и нас, и клиента от недоразумений.</p>
+        <div class="faq-section-card">
+            <h2 class="text-center">Вопросы об оплате</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли оплатить наложенным платежом?</span>
+                        <i class="faq-icon fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Нет, мы не работаем с наложенным платежом. Ремонт осуществляется по 50% предоплате после диагностики и согласования стоимости. Это стандартная практика, которая защищает и нас, и клиента от недоразумений.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
     </main>
 
-    <footer id="page-footer" class="main-footer">
+    <footer id="page-footer">
         <div class="container">
             <div class="footer-content">
-                <p>© 2025 DieselProfi.</p>
+                <p>© 2025 DieselProfi. Все права защищены.</p>
                 <div class="social-icons">
                     <a href="https://t.me/your_username" aria-label="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
                     <a href="https://wa.me/your_number" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -110,7 +137,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="/remont-forsunok/js/script.js"></script>
 </body>
 </html>

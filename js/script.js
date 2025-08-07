@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- Логика для плавной анимации при скролле ---
-    const animatedElements = document.querySelectorAll('section, .info-block, .service-card, .price-table, .final-calculator, .feature-card, .step-card, .review-card, .faq-accordion, .contact-grid');
+    const animatedElements = document.querySelectorAll('section, .card, .info-block, .table-container, .calculator-wrapper, .feature-card, .step, .review-card, .faq-section-card, .contact-grid, .testimonial-card');
     if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
